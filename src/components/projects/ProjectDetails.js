@@ -5,15 +5,15 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 
 const ProjectDetails = (props) => {
-  const { project, auth } = this.props;
-  if (!auth.uid) return <Redirect to='/signin' />
+  const { project, auth } = props;
+  if (!auth.uid) return <Redirect to='/signin' /> 
   if (project) {
     return (
       <div className="container section project-details">
         <div className="card z-depth-0">
           <div className="card-content">
             <span className="card-title">{project.title}</span>
-            <p>{project.content}</p>
+            <p>{project.content}</p>s
           </div>
           <div className="card-action grey lighten-4 grey-text">
             <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
